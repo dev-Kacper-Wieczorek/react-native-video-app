@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome, Kacper 👋</Text>
+      <Text style={styles.title}>Welcome, Kacper </Text>
       <Text style={styles.subtitle}>Choose a category to start learning</Text>
     </View>
   );
