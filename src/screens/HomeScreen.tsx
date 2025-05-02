@@ -1,11 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import CategoryList from '../components/CategoryList';
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome, Kacper </Text>
       <Text style={styles.subtitle}>Choose a category to start learning</Text>
+
+      <CategoryList />  {/* ← DODAJ TO TUTAJ */}
     </View>
   );
 };
