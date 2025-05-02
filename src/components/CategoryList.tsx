@@ -1,9 +1,20 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity
+} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/types';
 
 const categories = ['React Native', 'React', 'TypeScript', 'JavaScript'];
 
 const CategoryList = () => {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Popular Categories</Text>
@@ -18,7 +29,10 @@ const CategoryList = () => {
           </TouchableOpacity>
         )}
       />
-      <TouchableOpacity style={styles.showMoreBtn}>
+      <TouchableOpacity
+        style={styles.showMoreBtn}
+        onPress={() => navigation.navigate('Search')}
+      >
         <Text style={styles.showMoreText}>Show more →</Text>
       </TouchableOpacity>
     </View>
