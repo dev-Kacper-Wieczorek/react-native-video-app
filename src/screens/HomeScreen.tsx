@@ -1,0 +1,31 @@
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+const HomeScreen = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome, Kacper 👋</Text>
+      <Text style={styles.subtitle}>Choose a category to start learning</Text>
+    </View>
+  );
+};
+
+export default HomeScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 60,
+    paddingHorizontal: 20,
+    backgroundColor: '#ffffff',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '600',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#555',
+  },
+});
